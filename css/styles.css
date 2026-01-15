@@ -1,0 +1,165 @@
+/*  RESETEO BÁSICO */
+* {
+    margin: 0;
+    padding: 0; /* el paddin es el espacio entre el contenido y el borde */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: #f8f8f8;  /* gris muy claro */ /* es el color de fondo de la pagina */
+    color: #222; /* negro suave */ /* es el color de la letra de la pagina */
+    line-height: 1.5;
+}
+
+
+/*  HEADER  */
+header {
+    background-color: #111; /*  color negro para  el header usar el mismo en el footer */
+    color: white;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between; /* esto es para poner los elementos uno al lado del otro */
+    align-items: center;
+}
+
+/* IZQUIERDA */
+.header-left {
+    display: flex; /* esto es para poner los elementos uno al lado del otro */
+    flex-direction: column; /* esto es para poner los elementos uno debajo del otro */
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* MENÚ PRINCIPAL */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.header-nav a:hover {
+    opacity: 0.7;
+}
+
+/* ICONOS DE LA DERECHA */
+.header-icons .icono {
+    font-size: 1.4rem;
+    margin-left: 15px; /* espacio entre los iconos que me quedo muy grande y chicos los iconos pero se cambian */
+    cursor: pointer; /* cambia el cursor al pasar por encima a un icono */
+}
+
+.header-icons .icono:hover {
+    opacity: 0.7;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*  MAIN  */ 
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+/* Artículos generales */
+article {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+article h3 {
+    margin-bottom: 5px;
+}
+
+
+/* ======= FOOTER ======= */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+}
+
+/* Contenedor horizontal de iconos del footer */
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+/* Cada columna del footer */
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-item .icono { /*  aca  le pongo estilo a los iconos del footer */
+    font-size: 4rem;  /* tamaño del icono del footer */
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* === DESTACADOS EN HORIZONTAL === */
+.destacados-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* si la pantalla es chica baja una fila si la pantalla es chica */
+}
+
+.destacados-grid .item {
+    flex: 1;
+    min-width: 200px; /* asegura que no se achiquen demasiado */
+    background: white; 
+    border: 1px solid #ddd; /* borde gris */
+    padding: 15px;
+    border-radius: 5px; /* borde redondo */
+    text-align: center; /* texto centrado */
+}
+
+.destacados-grid .item h3 {
+    margin-bottom: 8px; /* espacio entre el titulo y el precio */
+}
