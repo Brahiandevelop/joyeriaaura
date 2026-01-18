@@ -189,11 +189,20 @@ footer p {
 }
 
 
+/* lo dejo aca para no olvidarme que esta relacionado a la vista mobile es para sacar el menu en pantalla grande */
+#menu-toggle, /* # porque es un id */
+.menu-icon {
+    display: none;
+
+}
+
+/*media queries*/
 
 /*    MOBILE – max-width: 500px medida dada en clase */
+
 @media (max-width: 500px) {
 
-    
+    /* ===== HEADER ===== */
     header {
         flex-direction: column;
         gap: 15px;
@@ -209,14 +218,17 @@ footer p {
         height: 80px;
     }
 
-    /* BOTÓN HAMBURGUESA */
-    .menu-toggle {
-        background: none;
-        border: none;
-        color: white;
+    /* MENU HAMBURGUESA */
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block; 
         font-size: 2rem;
+        color: white;
         cursor: pointer;
-        display: block;
+        user-select: none;
     }
 
     /* Menú oculto por defecto */
@@ -235,9 +247,15 @@ footer p {
         font-size: 1rem;
     }
 
-    /* Iconos */
+    /* Mostrar menú al activar hamburguesa */
+    #menu-toggle:checked + .menu-icon + .header-nav {
+        display: block;
+    }
+
+    /*  ICONOS HEADER  */
     .header-icons {
         justify-content: center;
+        gap: 20px;
     }
 
     .header-icons img {
@@ -245,7 +263,22 @@ footer p {
         height: 30px;
     }
 
-    /* ===== DESTACADOS ===== */
+    /*  MAIN  */
+    main {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    article {
+        padding: 12px;
+    }
+
+    /*  DESTACADOS  2 POR FILA  */
     .destacados-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -256,7 +289,7 @@ footer p {
         min-width: unset;
     }
 
-    /* ===== FOOTER ===== */
+    /*  FOOTER  */
     .footer-info {
         flex-direction: column;
         gap: 20px;

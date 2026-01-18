@@ -1,48 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">  <!-- define la codificacion de los caracteres que se usan en el documento -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Aura Joyas Masculinas</title> <!-- define el titulo de la pagina / pestaña del navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Aura Joyas Masculinas</title>
 
-    <link rel="stylesheet" href="css/styles.css"> <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
-    <header>
 
-        <!-- Zona izquierda: logo y slogan -->
-        <div class="header-left">
-            <div class="logo"> <!-- Corregir imagen se le ve el logo de gemini, mejorar -->
-                <a href="./index.html">
-                    <img 
-                    src="img/logo/logo dorado.png" 
+<header>
+    <!-- Zona izquierda: logo y slogan -->
+    <div class="header-left">
+        <div class="logo">
+            <a href="../index.html">
+                <img 
+                    src="../img/logo/logo dorado.png" 
                     alt="Aura Joyas Masculinas"
-                    >
-                </a>    
-            </div>
-            
-            <h2>Joyas Masculinas</h2>
+                >
+            </a>    
+        </div>
+        <h2>Joyas Masculinas</h2>
+    </div>
+
+    <!-- Navegación principal -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label> <!-- recomendacion del profe para mnobile --> 
+    <nav class="header-nav">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Nuestros productos</a></li>
+            <li><a href="colecciones.html">Colecciones</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Iconos: cuenta, búsqueda y carrito -->
+    <div class="header-icons">
+        <a href="#" class="icono">
+            <img src="../img/iconos/cuenta.png" alt="Cuenta">
+        </a>
+        <a href="#" class="icono">
+            <img src="../img/iconos/lupa.png" alt="Buscar">
+        </a>
+        <a href="#" class="icono">
+            <img src="../img/iconos/carrito.png" alt="Carrito">
+        </a>
+    </div>
+</header><!-- define el contenido principal de la pagina "principal" -->
+
+<main> 
+    <!-- pedir a gpt el contenido de los parrafos -->
+    <section>
+        <h2>Sobre Aura</h2>
+        <p>
+            Aura nace de la idea de que cada hombre merece llevar piezas que reflejen su identidad,
+            su carácter y su presencia. Diseñamos joyas masculinas pensadas para quienes valoran
+            la elegancia, el detalle y la autenticidad en cada aspecto de su estilo.
+        </p>
+    </section>
+
+        <section>
+        <h2>Nuestra historia</h2>
+
+        <article>
+            <p>
+                Fundada como un proyecto independiente, Aura surge de la pasión por el diseño
+                minimalista y la joyería contemporánea. Desde nuestros inicios, buscamos romper
+                con lo tradicional y ofrecer piezas modernas, versátiles y atemporales.
+            </p>
+
+            <p>
+                Cada colección está inspirada en la fuerza, la simplicidad y la personalidad
+                del hombre actual, combinando materiales resistentes con un diseño cuidado
+                hasta el último detalle.
+            </p>
+        </article>
+    </section>
+
+        <section>
+        <h2>Nuestra filosofía</h2>
+
+        <article>
+            <h3>Diseño con propósito</h3>
+            <p>
+                Creemos que una joya no es solo un accesorio, sino una extensión de quien la usa.
+                Por eso, cada pieza de Aura está pensada para acompañarte en tu día a día,
+                adaptándose a distintos estilos y momentos.
+            </p>
+        </article>
+
+        <article>
+            <h3>Calidad y detalle</h3>
+            <p>
+                Seleccionamos cuidadosamente los materiales y prestamos especial atención
+                a los acabados, asegurando durabilidad, comodidad y una estética premium.
+            </p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Nuestro compromiso</h2>
+
+        <article>
+            <p>
+                En Aura nos comprometemos a ofrecer productos de calidad, una experiencia
+                de compra clara y un trato cercano con nuestros clientes.
+                Buscamos construir una marca en la que puedas confiar.
+            </p>
+
+            <p>
+                Cada joya que sale de Aura representa nuestro compromiso con el diseño,
+                la identidad masculina y la excelencia.
+            </p>
+        </article>
+    </section>
+
+</main>
+
+<footer> <!-- mantengo el footer -->
+    <section class="footer-info">
+        <div class="footer-item">
+            <span class="icono">🚚</span>
+            <p>Envíos</p>
         </div>
 
-        <!-- Navegación principal -->
-        <nav class="header-nav">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="../pages/productos.html">Nuestros productos</a></li>
-                <li><a href="../pages/colecciones.html">Colecciones</a></li>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <!-- Iconos: cuenta, búsqueda y carrito -->
-        <div class="header-icons">
-            <span class="icono">👤</span>
-            <span class="icono">🔍</span>
-            <span class="icono">🛒</span>
+        <div class="footer-item">
+            <span class="icono">💳</span>
+            <p>Pagos</p>
         </div>
 
-    </header> <!-- define el contenido principal de la pagina "principal" -->
-    
+        <div class="footer-item">
+            <span class="icono">@</span>
+            <p>Redes Sociales</p>
+        </div>
+
+        <div class="footer-item">
+            <span class="icono">❓</span>
+            <p>Ayuda</p>
+        </div>
+    </section>
+
+    <p>© 2025 AURA Joyas Masculinas</p>
+</footer>
+
 </body>
 </html>
