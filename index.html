@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">  <!-- define la codificacion de los caracteres que se usan en el documento -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Aura Joyas Masculinas</title> <!-- define el titulo de la pagina / pestaña del navegador -->
 
     <link rel="stylesheet" href="css/styles.css"> <!-- Vinculación del CSS -->
@@ -11,36 +11,38 @@
 
 <body>
     <header>
-         <!--divido el header en 3 zonas -->
-        <div class="header-left"> <!-- aca lo defino del lado izquierdo -->
-            <div class="logo"><h1>AURA</h1></div>
+
+        <!-- Zona izquierda: logo y slogan -->
+        <div class="header-left">
+            <div class="logo"> <!-- Corregir imagen se le ve el logo de gemini, mejorar -->
+                <a href="./index.html">
+                    <img 
+                    src="img/logo/logo dorado.png" 
+                    alt="Aura Joyas Masculinas"
+                    >
+                </a>    
+            </div>
+            
             <h2>Joyas Masculinas</h2>
-        </div>  <!-- define el contenido principal de la pagina "encabezados" mwjorar para agregar css usar div -->
-                
-        <nav class="header-nav">   
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="header-nav">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cadenas</a></li>
-                <li><a href="#">Anillos</a></li>
-                <li><a href="#">Pulseras</a></li>
-                <li><a href="#">Caravanas</a></li>
-                <li><a href="#">Colecciones</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Nuestros productos</a></li>
+                <li><a href="pages/colecciones.html">Colecciones</a></li>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        
-                
-           <!-- me falta agregar el BOTON "cuenta" "LUPA" y "CARRITO"  me dejo iconos pa no olvidarme--> 
-            <div class="header-icons"></div>
-              <!--Cuenta -->
-                <span class="icono">👤</span>
-                <!--lupa -->
-                <span class="icono">🔍</span>
-                <!--carrito -->
-                <span class="icono">🛒</span>
-            </div>
-        
+
+        <!-- Iconos: cuenta, búsqueda y carrito -->
+        <div class="header-icons">
+            <span class="icono">👤</span>
+            <span class="icono">🔍</span>
+            <span class="icono">🛒</span>
+        </div>
 
     </header> <!-- define el contenido principal de la pagina "principal" -->
     <main>
@@ -98,20 +100,7 @@
                 <p>descripcion.</p>
             </article>
         </section>
-
-
-            <!-- Categorías -->
-        <section>
-            <h2>Categorías</h2>
-
-            <ul>
-                <li>Cadenas</li>
-                <li>Anillos</li>
-                <li>Pulseras</li>
-                <li>Caravanas</li>
-                <li>Colecciones</li>
-            </ul>
-        </section>
+       
 
     </main>
 
