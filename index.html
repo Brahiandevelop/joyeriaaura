@@ -14,63 +14,55 @@
 
 
 <body>
-    <header>
+    <header class="site-header">
 
-        <!-- Zona izquierda: logo y slogan -->
-        <div class="header-left">
-            <div class="logo"> <!-- Corregir imagen se le ve el logo de gemini, mejorar -->
-                <a href="./index.html">
-                    <img 
-                    src="img/logo/logo dorado.png" 
-                    alt="Aura Joyas Masculinas"
-                    >
-                </a>    
-            </div>
-            
-            <h2>Joyas Masculinas</h2>
-        </div>
+    <!-- IZQUIERDA -->
+    <div class="header-left">
+        <a href="./index.html" class="logo">
+            <img src="img/logo/logo dorado.png" alt="Aura Joyas Masculinas">
+        </a>
+        <span class="slogan">Joyas Masculinas</span>
+    </div>
 
-        <!-- Navegación principal --> 
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label> <!-- recomendacion del profe para mnobile --> 
-        <nav class="header-nav">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Nuestros productos
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="pages/anillos.html">Anillos</a></li>
-                        <li><a class="dropdown-item" href="pages/cadenas.html">Cadenas</a></li>
-                        <li><a class="dropdown-item" href="pages/pulseras.html">Pulseras</a></li>
-                    </ul>
-                </li>
+    <!-- HAMBURGUESA (solo mobile) -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-                <li><a href="pages/colecciones.html">Colecciones</a></li>
-                <li><a href="pages/nosotros.html">Nosotros</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <!-- NAV -->
+    <nav class="header-nav">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
 
-        <!-- Iconos: cuenta, búsqueda y carrito -->
-        <div class="header-icons">
-            <a href="#" class="icono">
-                <img src="img/iconos/cuenta.png" alt="Cuenta">
-            </a>
-            <a href="#" class="icono">
-                <img src="img/iconos/lupa.png" alt="Buscar">
-            </a>
-            <a href="#" class="icono">
-                <img src="img/iconos/carrito.png" alt="Carrito">
-            </a>
-        </div>
+            <li class="dropdown">
+                <a class="dropdown-toggle"
+                   href="#"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    Nuestros productos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="pages/anillos.html">Anillos</a></li>
+                    <li><a class="dropdown-item" href="pages/cadenas.html">Cadenas</a></li>
+                    <li><a class="dropdown-item" href="pages/pulseras.html">Pulseras</a></li>
+                </ul>
+            </li>
 
-    </header> <!-- define el contenido principal de la pagina "principal" -->
+            <li><a href="pages/colecciones.html">Colecciones</a></li>
+            <li><a href="pages/nosotros.html">Nosotros</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- DERECHA -->
+    <div class="header-icons">
+        <a href="#"><img src="img/iconos/cuenta.png" alt="Cuenta"></a>
+        <a href="#"><img src="img/iconos/lupa.png" alt="Buscar"></a>
+        <a href="#"><img src="img/iconos/carrito.png" alt="Carrito"></a>
+    </div>
+
+</header>
+
     <main>
 
         <section>
