@@ -28,8 +28,63 @@ body {
     background-color: #222;
 }
 
+/* Logo */
+.navbar-brand img {
+    border-radius: 14px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
 
-/*    MAIN */
+.navbar-brand:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    box-shadow: 0 6px 16px rgba(201, 162, 77, 0.25); /* dorado sutil */
+}
+
+/* Texto slogan */
+.navbar-brand span {
+    transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover span {
+    opacity: 1;
+}
+
+/* Links del menú */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.navbar-nav .nav-link::after { /*linea debajo de los links bien coqueta*/
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #c9a24d; 
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Iconos del header */
+header .d-flex img {
+    border-radius: 10px;
+    padding: 4px;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    cursor: pointer;
+}
+
+header .d-flex img:hover {
+    transform: scale(1.15);
+    background-color: rgba(255, 255, 255, 0.08); /*para darle un efecto de sombra al icono en  color blanco*/
+}
+
+/*proximo paso trabajar el estilado del MAIN quiza con SASS*/
+/*    MAIN */ 
 main {
     max-width: 1000px;
     margin: 40px auto;
@@ -90,6 +145,12 @@ article h3 {
     font-weight: bold;
 }
 
+/* Hover productos */
+.producto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 /*    DESTACADOS */
 .destacados-grid {
     display: grid;
@@ -98,28 +159,14 @@ article h3 {
     
 }
 
-.destacados-grid .item {
-    flex: 1;
-    min-width: 200px;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.destacados-grid .item h3 {
-    margin-bottom: 8px;
-}
-
 /* COLECCIONES */
 .coleccion-item {
     background: white;
     border-radius: 6px;
     padding: 15px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
-
 
 .coleccion-item img {
     width: 100%;
@@ -134,39 +181,61 @@ article h3 {
     font-size: 1.1rem;
 }
 
-
-/*    FOOTER */
-footer {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
-    margin-top: 40px;
+.coleccion-item:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
 }
 
-.footer-info {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 20px;
+/*    FOOTER */
+
+.footer {
+    background-color: #111;
 }
 
 .footer-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 12px;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.footer-item .icono {
-    font-size: 4rem;
-    margin-bottom: 5px;
+.footer-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    transition: opacity 0.25s ease;
 }
 
-footer p {
-    font-size: 0.9rem;
-    opacity: 0.7;
+.footer-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity: 1;
 }
 
+/* Iconos del footer */
+.footer-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.footer-item:hover .footer-icon {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Línea divisoria */
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
+    transition: opacity 0.3s ease;
+}
+.footer:hover .footer-divider { 
+    opacity: 0.8;
+}
 
 /*    RESPONSIVE – NAVBAR ) */
 @media (max-width: 991px) {
@@ -207,22 +276,11 @@ footer p {
         gap: 15px;
     }
 
-    .destacados-grid .item {
-        min-width: unset;
-    }
-
+    
     /* FOOTER */
-    .footer-info {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-item .icono {
-        font-size: 3rem;
-    }
-
-    footer p {
-        font-size: 0.8rem;
+    .footer-item {
+        justify-content: center;
+        text-align: center;
     }
 }
 
