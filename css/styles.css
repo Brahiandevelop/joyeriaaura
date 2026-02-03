@@ -1,137 +1,35 @@
-/*  RESETEO BÁSICO */
+/*    RESET BÁSICO */
 * {
     margin: 0;
-    padding: 0; /* el paddin es el espacio entre el contenido y el borde */
+    padding: 0;
     box-sizing: border-box;
 }
 
+
+/*    BASE*/
 body {
-    font-family: Arial, Helvetica, sans-serif; 
-    background-color: #f8f8f8;  /* gris muy claro */ /* es el color de fondo de la pagina */
-    color: #222; /* negro suave */ /* es el color de la letra de la pagina */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
     line-height: 1.5;
 }
 
 
-/*  HEADER  */
-.site-header {
-    background-color: #111;
-    color: white;
-    padding: 15px 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-
-/* IZQUIERDA */
-.header-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-
-.logo img {
-    height: 90px;
-    width: auto;
-    border-radius: 10px;
-    object-fit: contain;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    cursor: pointer;
-}
-
-
-.logo img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
-
-.logo {
-    display: inline-block;
-}
-
-
-/* Texto bajo el logo */
-.slogan {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    text-align: center;
-}
-
-
-/* MENÚ PRINCIPAL */
-.header-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
-.header-nav a {
-    color: white;
-    text-decoration: none;
+/*    NAVBAR Bootstrap */
+.navbar-nav .nav-link {
     font-size: 0.9rem;
 }
 
+.dropdown-menu {
+    border-radius: 5px;
+}
 
-.header-nav a:hover {
-    opacity: 0.7;
+.dropdown-item:hover {
+    background-color: #222;
 }
 
 
-/* FIX DROPDOWN BOOTSTRAP */
-.header-nav .dropdown-menu {
-    margin-top: 8px;
-    border-radius: 6px;
-    display: none;
-    
-}
-
-.header-nav .dropdown-menu.show {
-    display: block;
-}
-
-
-/* ICONOS DERECHA */
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-icons .icono {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-icons img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    cursor: pointer;
-}
-
-
-/* Hover coqueto */
-.header-icons img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
-
-
-
-/*  MAIN  */ 
+/*    MAIN */
 main {
     max-width: 1000px;
     margin: 40px auto;
@@ -148,7 +46,8 @@ main h2 {
     color: #111;
 }
 
-/* Artículos generales */
+
+/*    ARTÍCULOS / CARDS*/
 article {
     background: white;
     border: 1px solid #ddd;
@@ -161,8 +60,82 @@ article h3 {
     margin-bottom: 5px;
 }
 
+/*    PRODUCTOS / GALERÍA */
+.producto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
 
-/* ======= FOOTER ======= */
+.producto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producto.destacado {
+    border: 5px solid #c9a24d; /* dorado suave */
+}
+
+.producto h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.producto p {
+    font-weight: bold;
+}
+
+/*    DESTACADOS */
+.destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+}
+
+.destacados-grid .item {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.destacados-grid .item h3 {
+    margin-bottom: 8px;
+}
+
+/* COLECCIONES */
+.coleccion-item {
+    background: white;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.coleccion-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.coleccion-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+/*    FOOTER */
 footer {
     background-color: #111;
     color: white;
@@ -171,7 +144,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Contenedor horizontal de iconos del footer */
 .footer-info {
     display: flex;
     justify-content: center;
@@ -179,15 +151,14 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Cada columna del footer */
 .footer-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.footer-item .icono { /*  aca  le pongo estilo a los iconos del footer */
-    font-size: 4rem;  /* tamaño del icono del footer */
+.footer-item .icono {
+    font-size: 4rem;
     margin-bottom: 5px;
 }
 
@@ -196,104 +167,25 @@ footer p {
     opacity: 0.7;
 }
 
-/* === DESTACADOS EN HORIZONTAL === */
-.destacados-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap; /* si la pantalla es chica baja una fila si la pantalla es chica */
-}
 
-.destacados-grid .item {
-    flex: 1;
-    min-width: 200px; /* asegura que no se achiquen demasiado */
-    background: white; 
-    border: 1px solid #ddd; /* borde gris */
-    padding: 15px;
-    border-radius: 5px; /* borde redondo */
-    text-align: center; /* texto centrado */
-}
+/*    RESPONSIVE – NAVBAR ) */
+@media (max-width: 991px) {
 
-.destacados-grid .item h3 {
-    margin-bottom: 8px; /* espacio entre el titulo y el precio */
-}
-
-
-/* lo dejo aca para no olvidarme que esta relacionado a la vista mobile es para sacar el menu en pantalla grande */
-#menu-toggle, /* # porque es un id */
-.menu-icon {
-    display: none;
-
-}
-
-/*media queries*/
-
-/*    MOBILE – max-width: 500px medida dada en clase */
-
-@media (max-width: 500px) {
-
-    /* ===== HEADER MOBILE ===== */
-    .site-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .navbar-collapse {
         gap: 15px;
     }
 
-    .slogan {
-    display: none;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-    }
-
-    .header-nav {
-        display: none;
-        width: 100%;
-    }
-
-    .header-nav a {
-        padding: 8px 0;
-        display: block;
-    }
-
-    .header-nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    #menu-toggle:checked + .menu-icon + .header-nav {
-        display: block;
-    }
-
-    .header-icons {
+    .navbar-collapse > div {
         justify-content: center;
-        gap: 20px;
+        margin-top: 10px;
     }
-   
-    .header-nav .dropdown-menu {
-        position: static;
-        display: none;
-        width: 100%;
-        margin-top: 5px;
-        box-shadow: none;
-    }
+}
 
-    .header-nav .dropdown-menu.show {
-        display: block;
-    }
 
-    .header-nav .dropdown-menu a {
-        padding: 10px;
-        text-align: center;
-    }
+/*    RESPONSIVE – MOBILE  */
+@media (max-width: 500px) {
 
-    /*  MAIN  */
+    /* MAIN */
     main {
         margin: 20px auto;
         padding: 10px;
@@ -308,7 +200,7 @@ footer p {
         padding: 12px;
     }
 
-    /*  DESTACADOS  2 POR FILA  */
+    /* DESTACADOS – 2 POR FILA */
     .destacados-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -319,7 +211,7 @@ footer p {
         min-width: unset;
     }
 
-    /*  FOOTER  */
+    /* FOOTER */
     .footer-info {
         flex-direction: column;
         gap: 20px;
@@ -333,3 +225,4 @@ footer p {
         font-size: 0.8rem;
     }
 }
+

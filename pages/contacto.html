@@ -14,54 +14,72 @@
 
 <body>
 
-<header class="site-header">
+    <header class="bg-dark px-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <!-- IZQUIERDA -->
-    <div class="header-left">
-        <a href="../index.html" class="logo">
-            <img src="../img/logo/logodorado.png" alt="Aura Joyas Masculinas">
-        </a>
-        <span class="slogan">Joyas Masculinas</span>
-    </div>
+            <!-- Logo + slogan -->
+            <a class="navbar-brand d-flex flex-column" href="../index.html">
+                <img src="../img/logo/logodorado.png" height="70" alt="Aura Joyas Masculinas">
+                <span style="font-size:0.8rem; opacity:.7;">Joyas Masculinas</span>
+            </a>
 
-    <!-- HAMBURGUESA (mobile) -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- NAV -->
-    <nav class="header-nav">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto gap-lg-3">
 
-            <li class="dropdown">
-                <a class="dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    Nuestros productos
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
-                    <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
-                    <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Nuestros productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
+                            <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
+                            <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="colecciones.html">Colecciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
                 </ul>
-            </li>
 
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+                <!-- Iconos derecha -->
+                <div class="d-flex gap-3">
+                    <a href="#"><img src="../img/iconos/cuenta.png" width="30" alt="Cuenta"></a>
+                    <a href="#"><img src="../img/iconos/lupa.png" width="30" alt="Buscar"></a>
+                    <a href="#"><img src="../img/iconos/carrito.png" width="30" alt="Carrito"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- DERECHA -->
-    <div class="header-icons">
-        <a href="#"><img src="../img/iconos/cuenta.png" alt="Cuenta"></a>
-        <a href="#"><img src="../img/iconos/lupa.png" alt="Buscar"></a>
-        <a href="#"><img src="../img/iconos/carrito.png" alt="Carrito"></a>
-    </div>
-
-</header>
 
 <main>
     <main class="contacto-main">

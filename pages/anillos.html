@@ -14,54 +14,72 @@
 
 <body>
 
-<header class="site-header">
+    <header class="bg-dark px-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <!-- IZQUIERDA -->
-    <div class="header-left">
-        <a href="../index.html" class="logo">
-            <img src="../img/logo/logodorado.png" alt="Aura Joyas Masculinas">
-        </a>
-        <span class="slogan">Joyas Masculinas</span>
-    </div>
+            <!-- Logo + slogan -->
+            <a class="navbar-brand d-flex flex-column" href="../index.html">
+                <img src="../img/logo/logodorado.png" height="70" alt="Aura Joyas Masculinas">
+                <span style="font-size:0.8rem; opacity:.7;">Joyas Masculinas</span>
+            </a>
 
-    <!-- HAMBURGUESA (mobile) -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- NAV -->
-    <nav class="header-nav">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto gap-lg-3">
 
-            <li class="dropdown">
-                <a class="dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    Nuestros productos
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
-                    <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
-                    <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Nuestros productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
+                            <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
+                            <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="colecciones.html">Colecciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
                 </ul>
-            </li>
 
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+                <!-- Iconos derecha -->
+                <div class="d-flex gap-3">
+                    <a href="#"><img src="../img/iconos/cuenta.png" width="30" alt="Cuenta"></a>
+                    <a href="#"><img src="../img/iconos/lupa.png" width="30" alt="Buscar"></a>
+                    <a href="#"><img src="../img/iconos/carrito.png" width="30" alt="Carrito"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- DERECHA -->
-    <div class="header-icons">
-        <a href="#"><img src="../img/iconos/cuenta.png" alt="Cuenta"></a>
-        <a href="#"><img src="../img/iconos/lupa.png" alt="Buscar"></a>
-        <a href="#"><img src="../img/iconos/carrito.png" alt="Carrito"></a>
-    </div>
-
-</header>
 
 <main class="anillos-main">
 
@@ -75,25 +93,34 @@
     <section class="anillos-destacados">
         <h2>Destacados</h2>
 
-        <div class="row g-4">
+       <div class="row g-4">
 
             <div class="col-12 col-md-6">
                 <article class="producto destacado position-relative">
                     <span class="tag-new">NEW</span>
-                    <h3>Anillo Atlas</h3>
-                    <p class="precio">$ 2.490</p>
-                </article>
-            </div>
 
-            <div class="col-12 col-md-6">
-                <article class="producto destacado position-relative">
-                    <span class="tag-new">NEW</span>
-                    <h3>Anillo Titan</h3>
+                    <img src="../img/productos/anillos/elegantelineaazul.png"
+                        alt="Anillo Línea Azul">
+
+                    <h3>Línea Azul</h3>
                     <p class="precio">$ 2.790</p>
                 </article>
             </div>
 
+            <div class="col-12 col-md-6">
+                <article class="producto destacado position-relative">
+                    <span class="tag-new">NEW</span>
+
+                    <img src="../img/productos/anillos/platapieldragon.png"
+                        alt="Anillo Piel de Dragón">
+
+                    <h3>Piel de Dragón</h3>
+                    <p class="precio">$ 1.500</p>
+                </article>
+            </div>
+
         </div>
+
     </section>
 
     <!-- GALERÍA -->
@@ -102,27 +129,64 @@
 
         <div class="row g-4">
 
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 01</h3><p>$ 1.990</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 02</h3><p>$ 1.990</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 03</h3><p>$ 2.190</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 04</h3><p>$ 2.190</p></article></div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/elegantelineaazul.png" alt="Anillo elegante línea azul">
+                    <h3>Línea Azul</h3>
+                    <p>$ 2.790</p>
+                </article>
+            </div>
 
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 05</h3><p>$ 2.390</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 06</h3><p>$ 2.390</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 07</h3><p>$ 2.590</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 08</h3><p>$ 2.590</p></article></div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/negroguardablanca.png" alt="Anillo negro guarda blanca">
+                    <h3>Negro Guarda Blanca</h3>
+                    <p>$ 2.190</p>
+                </article>
+            </div>
 
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 09</h3><p>$ 1.890</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 10</h3><p>$ 1.890</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 11</h3><p>$ 2.090</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 12</h3><p>$ 2.090</p></article></div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/platacardinales.png" alt="Anillo plata cardinales">
+                    <h3>Cardinales</h3>
+                    <p>$ 2.390</p>
+                </article>
+            </div>
 
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 13</h3><p>$ 2.290</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 14</h3><p>$ 2.290</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 15</h3><p>$ 2.490</p></article></div>
-            <div class="col-12 col-sm-6 col-lg-3"><article class="producto"><h3>Anillo 16</h3><p>$ 2.490</p></article></div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/plataleon.png" alt="Anillo plata león">
+                    <h3>León</h3>
+                    <p>$ 2.590</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/platalineanegra.png" alt="Anillo plata línea negra">
+                    <h3>Línea Negra</h3>
+                    <p>$ 2.290</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/platamesa.png" alt="Anillo plata mesa">
+                    <h3>Mesa</h3>
+                    <p>$ 2.490</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/anillos/platapieldragon.png" alt="Anillo plata piel de dragón">
+                    <h3>Piel de Dragón</h3>
+                    <p>$ 1.500</p>
+                </article>
+            </div>
 
         </div>
+
     </section>
 
 </main>

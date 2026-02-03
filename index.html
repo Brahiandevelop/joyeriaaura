@@ -13,54 +13,72 @@
 
 
 <body>
-    <header class="site-header">
+    <header class="bg-dark px-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <!-- IZQUIERDA -->
-    <div class="header-left">
-        <a href="./index.html" class="logo">
-            <img src="img/logo/logodorado.png" alt="Aura Joyas Masculinas">
-        </a>
-        <span class="slogan">Joyas Masculinas</span>
-    </div>
+            <!-- Logo + slogan -->
+            <a class="navbar-brand d-flex flex-column" href="index.html">
+                <img src="img/logo/logodorado.png" height="70" alt="Aura Joyas Masculinas">
+                <span style="font-size:0.8rem; opacity:.7;">Joyas Masculinas</span>
+            </a>
 
-    <!-- HAMBURGUESA (solo mobile) -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- NAV -->
-    <nav class="header-nav">
-        <ul>
-            <li><a href="./index.html">Inicio</a></li>
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto gap-lg-3">
 
-            <li class="dropdown">
-                <a class="dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    Nuestros productos
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="pages/anillos.html">Anillos</a></li>
-                    <li><a class="dropdown-item" href="pages/cadenas.html">Cadenas</a></li>
-                    <li><a class="dropdown-item" href="pages/pulseras.html">Pulseras</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Nuestros productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="pages/anillos.html">Anillos</a></li>
+                            <li><a class="dropdown-item" href="pages/cadenas.html">Cadenas</a></li>
+                            <li><a class="dropdown-item" href="pages/pulseras.html">Pulseras</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/colecciones.html">Colecciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+
                 </ul>
-            </li>
 
-            <li><a href="pages/colecciones.html">Colecciones</a></li>
-            <li><a href="pages/nosotros.html">Nosotros</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+                <!-- Iconos derecha -->
+                <div class="d-flex gap-3">
+                    <a href="#"><img src="img/iconos/cuenta.png" width="30" alt="Cuenta"></a>
+                    <a href="#"><img src="img/iconos/lupa.png" width="30" alt="Buscar"></a>
+                    <a href="#"><img src="img/iconos/carrito.png" width="30" alt="Carrito"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- DERECHA -->
-    <div class="header-icons">
-        <a href="#"><img src="img/iconos/cuenta.png" alt="Cuenta"></a>
-        <a href="#"><img src="img/iconos/lupa.png" alt="Buscar"></a>
-        <a href="#"><img src="img/iconos/carrito.png" alt="Carrito"></a>
-    </div>
-
-</header>
 
     <main>
 
@@ -69,56 +87,74 @@
             <p>Joyas masculinas diseñadas para destacar tu estilo. Elegancia moderna en acero, plata y más.</p> <!-- definie que es lo que se va a mostrar en la pagina -->
         </section>
         
-        <section class="destacados">  <!-- trabajo la seccion para pasarla a horizontal --> <!-- si me queda bien sigo con las demas -->
-            <h2>Productos Destacados</h2>
+        <div class="destacados-grid">
 
-            <div class="destacados-grid">
+            <article class="producto">
+                <img src="img/productos/cadenas/cubananegra.png" alt="Cadena Cubana Negra">
+                <h3>Cubana Negra</h3>
+                <p>$ 3.490</p>
+            </article>
 
-                <article class="item">
-                    <h3>Cadena 1</h3>
-                    <p>Precio</p>
-                </article>
+            <article class="producto">
+                <img src="img/productos/anillos/negroguardablanca.png" alt="Anillo Negro Guarda Blanca">
+                <h3>Negro Guarda Blanca</h3>
+                <p>$ 2.190</p>
+            </article>
 
-                <article class="item">
-                    <h3>Anillo 1</h3>
-                    <p>Precio</p>
-                </article>
+            <article class="producto">
+                <img src="img/productos/anillos/platamesa.png" alt="Anillo Plata Mesa">
+                <h3>Mesa</h3>
+                <p>$ 2.490</p>
+            </article>
 
-                <article class="item">
-                    <h3>Anillo 2</h3>
-                    <p>Precio</p>
-                </article>
+            <article class="producto">
+                <img src="img/productos/pulseras/eslabonesnegra.png" alt="Pulsera Eslabones Negra">
+                <h3>Eslabones Negra</h3>
+                <p>$ 2.590</p>
+            </article>
 
-                <article class="item">
-                    <h3>Pulsera 1</h3>
-                    <p>Precio</p>
-                </article>
+        </div>
+
+        </section>
+
+
+        <section class="colecciones">
+            <h2>Colecciones</h2>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <a href="pages/colecciones.html#aura" class="text-decoration-none text-dark">
+                        <article class="coleccion-item">
+                            <img src="img/colecciones/coleccionaura.png" alt="Colección Aura">
+                            <h3>Aura</h3>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="pages/colecciones.html#ebano" class="text-decoration-none text-dark">
+                        <article class="coleccion-item">
+                            <img src="img/colecciones/coleccionebano.png" alt="Colección Ébano">
+                            <h3>Ébano</h3>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="pages/colecciones.html#plata" class="text-decoration-none text-dark">
+                        <article class="coleccion-item">
+                            <img src="img/colecciones/coleccionplata.png" alt="Colección Plata">
+                            <h3>Plata</h3>
+                        </article>
+                    </a>
+                </div>
 
             </div>
         </section>
 
 
-            <!-- Colecciones -->
-        <section>
-            <h2>Colecciones</h2>
-
-            <article>
-                <h3>Colección 1</h3>
-                <p>descripcion.</p>
-            </article>
-
-            <article>
-                <h3>Colección 2</h3>
-                <p>descripcion.</p>
-            </article>
-
-            <article>
-                <h3>Colección 3</h3>
-                <p>descripcion.</p>
-            </article>
-        </section>
        
-
     </main>
 
 <footer>

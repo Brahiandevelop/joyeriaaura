@@ -14,58 +14,173 @@
 
 <body>
 
-<header class="site-header">
+    <header class="bg-dark px-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <!-- IZQUIERDA -->
-    <div class="header-left">
-        <a href="../index.html" class="logo">
-            <img src="../img/logo/logodorado.png" alt="Aura Joyas Masculinas">
-        </a>
-        <span class="slogan">Joyas Masculinas</span>
-    </div>
+            <!-- Logo + slogan -->
+            <a class="navbar-brand d-flex flex-column" href="../index.html">
+                <img src="../img/logo/logodorado.png" height="70" alt="Aura Joyas Masculinas">
+                <span style="font-size:0.8rem; opacity:.7;">Joyas Masculinas</span>
+            </a>
 
-    <!-- HAMBURGUESA (mobile) -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- NAV -->
-    <nav class="header-nav">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto gap-lg-3">
 
-            <li class="dropdown">
-                <a class="dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    Nuestros productos
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
-                    <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
-                    <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Nuestros productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
+                            <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
+                            <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="colecciones.html">Colecciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
                 </ul>
-            </li>
 
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+                <!-- Iconos derecha -->
+                <div class="d-flex gap-3">
+                    <a href="#"><img src="../img/iconos/cuenta.png" width="30" alt="Cuenta"></a>
+                    <a href="#"><img src="../img/iconos/lupa.png" width="30" alt="Buscar"></a>
+                    <a href="#"><img src="../img/iconos/carrito.png" width="30" alt="Carrito"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- DERECHA -->
-    <div class="header-icons">
-        <a href="#"><img src="../img/iconos/cuenta.png" alt="Cuenta"></a>
-        <a href="#"><img src="../img/iconos/lupa.png" alt="Buscar"></a>
-        <a href="#"><img src="../img/iconos/carrito.png" alt="Carrito"></a>
-    </div>
 
-</header>
+<main class="cadenas-main">
 
-<main>
-    <!-- MAIN SE DESARROLLA DESPUÉS -->
+    <!-- ENCABEZADO -->
+    <section class="cadenas-hero">
+        <h1>Cadenas</h1>
+        <p>Cadenas masculinas en plata y acero. Fuerza, estilo y presencia.</p>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="cadenas-destacados">
+        <h2>Destacados</h2>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <article class="producto destacado position-relative">
+                    <span class="tag-new">NEW</span>
+
+                    <img src="../img/productos/cadenas/cubananegra.png"
+                         alt="Cadena Cubana Negra">
+
+                    <h3>Cubana Negra</h3>
+                    <p class="precio">$ 3.490</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="producto destacado position-relative">
+                    <span class="tag-new">NEW</span>
+
+                    <img src="../img/productos/cadenas/finaycrucifijo.png"
+                         alt="Cadena Fina con Crucifijo">
+
+                    <h3>Fina con Crucifijo</h3>
+                    <p class="precio">$ 2.990</p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="cadenas-galeria">
+        <h2>Todas las cadenas</h2>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/cadenas/cubanadorada.png" alt="Cadena Cubana Dorada">
+                    <h3>Cubana Dorada</h3>
+                    <p>$ 3.690</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/cadenas/cubananegra.png" alt="Cadena Cubana Negra">
+                    <h3>Cubana Negra</h3>
+                    <p>$ 3.490</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/cadenas/finaycrucifijo.png" alt="Cadena Fina con Crucifijo">
+                    <h3>Fina con Crucifijo</h3>
+                    <p>$ 2.990</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/cadenas/platafina.png" alt="Cadena Plata Fina">
+                    <h3>Plata Fina</h3>
+                    <p>$ 2.790</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/cadenas/platagrueza.png" alt="Cadena Plata Gruesa">
+                    <h3>Plata Gruesa</h3>
+                    <p>$ 3.290</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="producto">
+                    <img src="../img/productos/cadenas/platayleondorado.png" alt="Cadena León Dorado">
+                    <h3>León Dorado</h3>
+                    <p>$ 3.890</p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
 </main>
+
 
 <footer>
 

@@ -14,54 +14,71 @@
 
 <body>
 
-<header class="site-header">
+    <header class="bg-dark px-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <!-- IZQUIERDA -->
-    <div class="header-left">
-        <a href="../index.html" class="logo">
-            <img src="../img/logo/logodorado.png" alt="Aura Joyas Masculinas">
-        </a>
-        <span class="slogan">Joyas Masculinas</span>
-    </div>
+            <!-- Logo + slogan -->
+            <a class="navbar-brand d-flex flex-column" href="../index.html">
+                <img src="../img/logo/logodorado.png" height="70" alt="Aura Joyas Masculinas">
+                <span style="font-size:0.8rem; opacity:.7;">Joyas Masculinas</span>
+            </a>
 
-    <!-- HAMBURGUESA (mobile) -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- NAV -->
-    <nav class="header-nav">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto gap-lg-3">
 
-            <li class="dropdown">
-                <a class="dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    Nuestros productos
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
-                    <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
-                    <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Nuestros productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="anillos.html">Anillos</a></li>
+                            <li><a class="dropdown-item" href="cadenas.html">Cadenas</a></li>
+                            <li><a class="dropdown-item" href="pulseras.html">Pulseras</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="colecciones.html">Colecciones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
                 </ul>
-            </li>
 
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- DERECHA -->
-    <div class="header-icons">
-        <a href="#"><img src="../img/iconos/cuenta.png" alt="Cuenta"></a>
-        <a href="#"><img src="../img/iconos/lupa.png" alt="Buscar"></a>
-        <a href="#"><img src="../img/iconos/carrito.png" alt="Carrito"></a>
-    </div>
-
-</header>
+                <!-- Iconos derecha -->
+                <div class="d-flex gap-3">
+                    <a href="#"><img src="../img/iconos/cuenta.png" width="30" alt="Cuenta"></a>
+                    <a href="#"><img src="../img/iconos/lupa.png" width="30" alt="Buscar"></a>
+                    <a href="#"><img src="../img/iconos/carrito.png" width="30" alt="Carrito"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 <main class="colecciones-main">
 
@@ -77,12 +94,12 @@
 
             <li class="nav-item" role="presentation">
                 <button class="nav-link active"
-                        id="cuero-tab"
+                        id="aura-tab"
                         data-bs-toggle="pill"
-                        data-bs-target="#cuero"
+                        data-bs-target="#aura"
                         type="button"
                         role="tab">
-                    Cuero
+                    AURA
                 </button>
             </li>
 
@@ -93,22 +110,23 @@
                         data-bs-target="#plata"
                         type="button"
                         role="tab">
-                    Plata
+                    PLATA
                 </button>
             </li>
 
             <li class="nav-item" role="presentation">
                 <button class="nav-link"
-                        id="elegante-tab"
+                        id="ebano-tab"
                         data-bs-toggle="pill"
-                        data-bs-target="#elegante"
+                        data-bs-target="#ebano"
                         type="button"
                         role="tab">
-                    Elegante
+                    EBANO
                 </button>
             </li>
 
         </ul>
+
     </section>
 
     <!-- CONTENIDO DE COLECCIONES -->
@@ -116,79 +134,195 @@
 
         <div class="tab-content">
 
-            <!-- COLECCIÓN CUERO -->
-            <div class="tab-pane fade show active" id="cuero" role="tabpanel">
-                <div class="row g-4">
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 01</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 02</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 03</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 04</article></div>
+            <!-- COLECCIÓN Aura -->
+            <div class="tab-pane fade show active" id="aura" role="tabpanel">
+                    <div class="row g-4">
 
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 05</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 06</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 07</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 08</article></div>
+                        <!-- Anillo Plata León -->
+                        <div class="col-6 col-md-3">
+                            <article class="producto">
+                                <img src="../img/productos/anillos/plataleon.png" alt="Anillo Plata León">
+                                <h3>León</h3>
+                                <p>$ 2.590</p>
+                            </article>
+                        </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 09</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 10</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 11</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 12</article></div>
+                        <!-- Cadena Plata y León Dorado -->
+                        <div class="col-6 col-md-3">
+                            <article class="producto">
+                                <img src="../img/productos/cadenas/platayleondorado.png" alt="Cadena León Dorado">
+                                <h3>León Dorado</h3>
+                                <p>$ 3.890</p>
+                            </article>
+                        </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 13</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 14</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 15</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Cuero 16</article></div>
-                </div>
+                        <!-- Pulsera Cuero Negro León Dorado -->
+                        <div class="col-6 col-md-3">
+                            <article class="producto">
+                                <img src="../img/productos/pulseras/cueronegroyleondorado.png" alt="Pulsera Cuero Negro León Dorado">
+                                <h3>Cuero León Dorado</h3>
+                                <p>$ 1.890</p>
+                            </article>
+                        </div>
+
+                    </div>
+
             </div>
 
             <!-- COLECCIÓN PLATA -->
             <div class="tab-pane fade" id="plata" role="tabpanel">
                 <div class="row g-4">
-                    <div class="col-6 col-md-3"><article class="producto">Plata 01</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 02</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 03</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 04</article></div>
+                    <!-- Pulseras -->
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/pulseras/esclavafinaenplata.png" alt="Pulsera Esclava Fina en Plata">
+                            <h3>Esclava Fina en Plata</h3>
+                            <p>$ 2.490</p>
+                        </article>
+                    </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Plata 05</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 06</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 07</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 08</article></div>
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/pulseras/eslabonesenplata.png" alt="Pulsera Eslabones en Plata">
+                            <h3>Eslabones Plata</h3>
+                            <p>$ 2.690</p>
+                        </article>
+                    </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Plata 09</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 10</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 11</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 12</article></div>
+                    <!-- Anillos -->
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/platacardinales.png" alt="Anillo Plata Cardinales">
+                            <h3>Cardinales</h3>
+                            <p>$ 2.390</p>
+                        </article>
+                    </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Plata 13</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 14</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 15</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Plata 16</article></div>
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/plataleon.png" alt="Anillo Plata León">
+                            <h3>León</h3>
+                            <p>$ 2.590</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/platalineanegra.png" alt="Anillo Plata Línea Negra">
+                            <h3>Línea Negra</h3>
+                            <p>$ 2.290</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/platamesa.png" alt="Anillo Plata Mesa">
+                            <h3>Mesa</h3>
+                            <p>$ 2.490</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/platapieldragon.png" alt="Anillo Plata Piel de Dragón">
+                            <h3>Piel de Dragón</h3>
+                            <p>$ 1.500</p>
+                        </article>
+                    </div>
+
+                    <!-- Cadenas -->
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/cadenas/finaycrucifijo.png" alt="Cadena Fina con Crucifijo">
+                            <h3>Fina con Crucifijo</h3>
+                            <p>$ 2.990</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/cadenas/platafina.png" alt="Cadena Plata Fina">
+                            <h3>Plata Fina</h3>
+                            <p>$ 2.790</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/cadenas/platagrueza.png" alt="Cadena Plata Gruesa">
+                            <h3>Plata Gruesa</h3>
+                            <p>$ 3.290</p>
+                        </article>
+                    </div>
+
                 </div>
+
             </div>
 
-            <!-- COLECCIÓN ELEGANTE -->
-            <div class="tab-pane fade" id="elegante" role="tabpanel">
+            <!-- COLECCIÓN Ebano -->
+            <div class="tab-pane fade" id="ebano" role="tabpanel">
                 <div class="row g-4">
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 01</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 02</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 03</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 04</article></div>
+                    <!-- Anillos -->
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/elegantelineaazul.png" alt="Anillo elegante línea azul">
+                            <h3>Línea Azul</h3>
+                            <p>$ 2.790</p>
+                        </article>
+                    </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 05</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 06</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 07</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 08</article></div>
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/anillos/negroguardablanca.png" alt="Anillo negro guarda blanca">
+                            <h3>Negro Guarda Blanca</h3>
+                            <p>$ 2.190</p>
+                        </article>
+                    </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 09</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 10</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 11</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 12</article></div>
+                    <!-- Cadenas -->
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/cadenas/cubananegra.png" alt="Cadena Cubana Negra">
+                            <h3>Cubana Negra</h3>
+                            <p>$ 3.490</p>
+                        </article>
+                    </div>
 
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 13</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 14</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 15</article></div>
-                    <div class="col-6 col-md-3"><article class="producto">Elegante 16</article></div>
+                    <!-- Pulseras -->
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/pulseras/esclavanegra.png" alt="Pulsera Esclava Negra">
+                            <h3>Esclava Negra</h3>
+                            <p>$ 2.290</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/pulseras/eslabonesnegra.png" alt="Pulsera Eslabones Negra">
+                            <h3>Eslabones Negra</h3>
+                            <p>$ 2.590</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/pulseras/negrapiedrasrojas.png" alt="Pulsera Negra con Piedras Rojas">
+                            <h3>Piedras Rojas</h3>
+                            <p>$ 1.990</p>
+                        </article>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <article class="producto">
+                            <img src="../img/productos/pulseras/negrapiedrasazules.png" alt="Pulsera Negra con Piedras Azules">
+                            <h3>Piedras Azules</h3>
+                            <p>$ 1.990</p>
+                        </article>
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
@@ -226,6 +360,25 @@
     <p>© 2025 AURA Joyas Masculinas</p>
 
 </footer>
+
+<!-- esta es la parte de la pestañas para que entre directamente en la coleccion-->
+
+<script> 
+document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+
+    if (hash) {
+        const triggerEl = document.querySelector(
+            `button[data-bs-target="${hash}"]`
+        );
+
+        if (triggerEl) {
+            const tab = new bootstrap.Tab(triggerEl);
+            tab.show();
+        }
+    }
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
