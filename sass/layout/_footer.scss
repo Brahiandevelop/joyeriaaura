@@ -1,0 +1,48 @@
+@use "../utilities/variables" as v;
+
+.footer {
+  background-color: v.$color-dark;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color v.$transition-normal;
+
+    p {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    transition: transform v.$transition-fast, filter v.$transition-fast;
+  }
+
+  &-item:hover &-icon {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+
+  &-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-item {
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,67 @@
+@use "../utilities/variables" as v;
+
+/* Artículos */
+article {
+  background: v.$color-white;
+  border: 1px solid v.$color-border;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+
+  h3 {
+    margin-bottom: 5px;
+  }
+}
+
+/* Productos */
+.producto {
+  background: v.$color-white;
+  border: 1px solid v.$color-border;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  transition: transform v.$transition-normal, box-shadow v.$transition-normal;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  &.destacado {
+    border: 5px solid v.$color-accent;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Colecciones */
+.coleccion-item {
+  background: v.$color-white;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  transition: transform v.$transition-normal, box-shadow v.$transition-normal;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}

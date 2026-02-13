@@ -1,0 +1,8 @@
+@use "../utilities/variables" as v;
+
+body {
+  font-family: v.$font-main;
+  background-color: v.$color-bg;
+  color: v.$color-text;
+  line-height: 1.5;
+}

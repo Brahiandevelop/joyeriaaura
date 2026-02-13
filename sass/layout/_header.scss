@@ -1,0 +1,15 @@
+@use "../utilities/variables" as v;
+
+header {
+  .d-flex img {
+    border-radius: 10px;
+    padding: 4px;
+    cursor: pointer;
+    transition: transform v.$transition-fast, background-color v.$transition-fast;
+
+    &:hover {
+      transform: scale(1.15);
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
