@@ -1,0 +1,26 @@
+@use "../utilities/variables" as v;
+
+/* Tabs Colecciones */
+.colecciones-tabs {
+
+  .nav-pills .nav-link {
+    background-color: transparent;
+    color: v.$color-dark;
+    border: 2px solid transparent;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    transition: all v.$transition-normal;
+  }
+
+  .nav-pills .nav-link:hover {
+    border-color: v.$color-accent;
+    color: v.$color-accent;
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: v.$color-dark;
+    color: v.$color-accent;
+    border-color: v.$color-accent;
+  }
+}

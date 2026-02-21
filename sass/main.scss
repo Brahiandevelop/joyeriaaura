@@ -1,4 +1,6 @@
 @use "utilities/variables";
+@use "utilities/mixins" as *;
+
 
 @use "base/reset";
 @use "base/tipography";
@@ -10,6 +12,9 @@
 
 @use "components/cards";
 @use "components/form";
+@use "components/buttons";
+@use "components/tabs";
+@use "components/whatsapp";
 
 
 

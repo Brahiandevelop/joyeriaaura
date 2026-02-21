@@ -1,0 +1,24 @@
+@use "../utilities/variables" as v;
+
+
+.btn-comprar {
+  background-color: v.$color-dark;
+  color: v.$color-accent;
+  border: 2px solid v.$color-accent;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+
+  margin-top: auto;
+}
+
+.btn-comprar:hover {
+  background-color: v.$color-accent;
+  color: v.$color-dark;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

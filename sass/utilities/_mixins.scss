@@ -1,0 +1,17 @@
+@use "variables" as v;
+
+@mixin card-base {
+  background: v.$color-white;
+  border: 1px solid v.$color-border;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+@mixin hover-elevate($distance: -5px, $shadow: 0 4px 10px rgba(0, 0, 0, 0.15)) {
+  transition: transform v.$transition-normal, box-shadow v.$transition-normal;
+
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: $shadow;
+  }
+}
